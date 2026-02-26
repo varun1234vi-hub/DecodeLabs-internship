@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varun | Cloud & DevOps Engineer</title>
+
+<style>
+
+/* ====== GOOGLE FONT ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ====== ANIMATED BACKGROUND GLOW ====== */
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:rgba(0,255,255,0.2);
+    filter:blur(150px);
+    top:-200px;
+    left:-200px;
+    animation:moveGlow 8s infinite alternate;
+    z-index:-1;
+}
+
+@keyframes moveGlow{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(200px,200px);}
+}
+
+/* ====== NAVBAR ====== */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 0;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.05);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0 20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00ffff;
+}
+
+/* ====== SECTIONS ====== */
+section{
+    min-height:100vh;
+    padding:120px 10%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+/* ====== GLASS CARD ====== */
+.glass{
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    padding:40px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    animation:fadeUp 1s ease forwards;
+    opacity:0;
+}
+
+@keyframes fadeUp{
+    from{
+        transform:translateY(40px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+/* ====== HERO ====== */
+#home{
+    text-align:center;
+}
+
+#home h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+#home span{
+    color:#00ffff;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    border-radius:30px;
+    background:#00ffff;
+    color:#000;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* ====== SKILLS ====== */
+.skill{
+    margin:20px 0;
+}
+
+.skill-name{
+    margin-bottom:5px;
+}
+
+.skill-bar{
+    height:8px;
+    background:rgba(255,255,255,0.2);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.skill-level{
+    height:100%;
+    background:#00ffff;
+    width:0;
+    animation:fillSkill 2s forwards;
+}
+
+@keyframes fillSkill{
+    to{width:100%;}
+}
+
+/* ====== PROJECTS ====== */
+.projects{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+}
+
+.project-card{
+    width:280px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.07);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.2);
+    transition:0.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-15px);
+    box-shadow:0 10px 40px rgba(0,255,255,0.4);
+}
+
+/* ====== CONTACT ====== */
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input, textarea{
+    margin:10px 0;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+}
+
+button{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#00ffff;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:white;
+    color:black;
+}
+
+/* ====== FOOTER ====== */
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.5);
+}
+
+/* ====== RESPONSIVE ====== */
+@media(max-width:768px){
+    nav ul{
+        flex-direction:column;
+    }
+    .projects{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Tech Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <div class="glass">
+        <h1>Hi, I'm <span>Varun Singh</span></h1>
+        <p>
+            Cloud & DevOps Engineer focused on building scalable, secure,
+            and automated infrastructure solutions using AWS and modern DevOps practices.
+        </p>
+        <p>
+            I specialize in Infrastructure as Code, CI/CD automation,
+            containerization, and high-availability cloud architecture.
+        </p>
+        <a href="#projects" class="btn">Explore My Work</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="glass">
+        <h2>Professional Summary</h2>
+        <p>
+            I am a BCA student and aspiring Cloud Engineer with strong interest in
+            distributed systems, cloud-native applications, and DevOps automation.
+            My goal is to design resilient infrastructure that supports high-performance
+            applications with minimal downtime.
+        </p>
+
+        <p>
+            I have hands-on experience deploying production-like environments
+            on AWS using EC2, RDS, S3, IAM, Load Balancers, and VPC.
+            I actively work on Docker containerization, Git-based workflows,
+            and CI/CD automation pipelines.
+        </p>
+
+        <p>
+            I continuously improve my Linux system administration skills,
+            networking knowledge, and security best practices to build
+            enterprise-level solutions.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="glass">
+        <h2>Technical Stack</h2>
+
+        <h3>Cloud Platforms</h3>
+        <p>AWS (EC2, S3, RDS, IAM, VPC, CloudWatch, ELB)</p>
+
+        <h3>DevOps Tools</h3>
+        <p>Docker, Git, GitLab CI/CD, Jenkins (Basics), Kubernetes (Basics)</p>
+
+        <h3>Operating Systems</h3>
+        <p>Linux (Ubuntu, Amazon Linux), Windows Server (Basic)</p>
+
+        <h3>Programming & Scripting</h3>
+        <p>Python, Bash, HTML, CSS</p>
+
+        <h3>Core Concepts</h3>
+        <p>
+            Infrastructure as Code, Networking Fundamentals, Load Balancing,
+            Auto Scaling, CI/CD Automation, Monitoring & Logging
+        </p>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="glass">
+        <h2>Featured Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <h3>Scalable 3-Tier AWS Architecture</h3>
+                <p>
+                    Designed and deployed a production-ready 3-tier architecture
+                    using EC2 (App Layer), RDS (Database Layer), and S3 (Static Storage).
+                </p>
+                <p>
+                    Implemented security groups, VPC configuration,
+                    and Application Load Balancer for high availability.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>CI/CD Pipeline Automation</h3>
+                <p>
+                    Built automated CI/CD pipeline using GitLab.
+                    On every code push, Docker image builds automatically
+                    and deploys to cloud server.
+                </p>
+                <p>
+                    Reduced manual deployment time by 70%.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Dockerized Web Application</h3>
+                <p>
+                    Containerized a full-stack application using Docker,
+                    optimized image layers, and implemented multi-stage builds.
+                </p>
+                <p>
+                    Improved portability and deployment consistency.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <div class="glass">
+        <h2>Experience & Learning Journey</h2>
+
+        <h3>Cloud Computing Intern (Virtual)</h3>
+        <p>
+            Worked on AWS-based deployment tasks, security configuration,
+            and infrastructure management exercises.
+        </p>
+
+        <h3>Self-Driven DevOps Projects</h3>
+        <p>
+            Continuously building personal DevOps labs including
+            Docker containers, CI/CD workflows, and Linux server setup.
+        </p>
+
+        <h3>Certifications (In Progress)</h3>
+        <p>
+            Preparing for AWS Certified Solutions Architect Associate.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="glass">
+        <h2>Let's Connect</h2>
+        <p>
+            I am open to internship opportunities, freelance cloud projects,
+            and DevOps collaborations. Feel free to reach out.
+        </p>
+
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Varun Singh</p>
+    <p>Cloud | DevOps | Automation | Infrastructure</p>
+    <p>Building scalable systems for the future 🚀</p>
+</footer>
+
+</body>
+</html>
