@@ -14,7 +14,7 @@ Control over security patches
 
 Secure remote access
 
-As a System Administrator (SysAdmin), the mission was to provision and configure a secure cloud-based virtual server.
+As a Cloud Engineer, the mission was to provision and configure a secure cloud-based virtual server.
 
 # 🎯 Mission Objectives
 
