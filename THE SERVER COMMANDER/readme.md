@@ -159,5 +159,5 @@ Real-world DevOps & SysAdmin Workflow
 👨‍💻 Author
 
 Varun 
-Cloud & DevOps Intren @DecodeLabs
-BCA Student
+Cloud & DevOps Intern @DecodeLabs
+
